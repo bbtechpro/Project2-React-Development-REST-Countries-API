@@ -10,3 +10,16 @@ body {
     font-family: "Nunito Sans";
     font-size: 14px;
 }
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+nav span {
+    font-weight: bold;
+}
