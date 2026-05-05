@@ -8,8 +8,12 @@ function Header() {
     return (
         <nav>
             <span>Where in the World?</span>
+
             <label className="switch">
-                <input type="checkbox" id="toggle"></input>
+                <input 
+                type="checkbox" 
+                checked={darkMode}
+                onChange={() => setDarkMode(!darkMode)} ></input>
                 <span className="slider round">
                     <IoMoon className="moon-icon" />
                 </span>
