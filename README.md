@@ -111,3 +111,65 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+
+Project Requirements
+•	Usage of React: You must use React for this project.
+•	Responsive Design: Ensure the application is fully responsive across various devices and screen sizes.
+•	API Integration: Effectively integrate the specified API to fetch and display data dynamically.
+•	Interactivity: Implement interactive elements such as search functionality, form validation, and dynamic content updates.
+•	Accessibility: Follow best practices to make the application accessible to all users.
+•	Version Control: Use Git for version control, with regular commits and a well-documented GitHub repository.
+•	Documentation: Include a comprehensive README.md file detailing the project setup, features, and any additional reflections.
+________________________________________
+Getting Started
+Start by reviewing each project’s description, brief, and associated images, then choose the challenge that aligns most with your skills and interests.
+Once you’ve selected a project:
+•	Download the starter files.
+•	Initialize a git repository.
+•	Plan your application structure.
+•	Begin coding and implementing the project’s features.
+Required Research
+Each of the project options intentionally includes things you may not be familiar with, such as new APIs, new libraries, or new concepts. You will be required to research and learn about these new technologies throughout the project.
+While the research requirements will vary depending on the project you select, you will absolutely need to research deployment as it is one of the required submission requirements below.
+Deployment is the act of making a web application accessible on a public URL. It is a crucial step in the project process, as it allows you to share and test your work with others. We have included a [Required Reading] section on deployment within this module to get you started. You may review this material at any point during the project timeline.
+________________________________________
+Submission Requirements
+1.	GitHub Repository:
+•	Host your project on GitHub with all source code and assets.
+•	Ensure the repository is public and includes a detailed README.md file.
+2.	Live Demo:
+•	Deploy your application using a platform like GitHub Pages, Netlify, or Vercel.
+•	Provide a link to the live demo in your README.md file.
+3.	Reflection Document:
+•	Write a 200-300 word reflection discussing your development process, challenges faced, solutions implemented, and potential improvements.
+•	Include this reflection in your GitHub repository.
+1. Initialize your project as a public repository on [GitHub](https://github.com/). Creating a repo will make it easier to share your code with the community if you need help. If you're not sure how to do this, [have a read-through of this Try Git resource](https://try.github.io/).
+2. Configure your repository to publish your code to a web address. This will also be useful if you need some help during a challenge as you can share the URL for your project with your repo URL. There are a number of ways to do this, and we provide some recommendations below.
+3. Look through the designs to start planning out how you'll tackle the project. This step is crucial to help you think ahead for CSS classes to create reusable styles.
+4. Before adding any styles, structure your content with HTML. Writing your HTML first can help focus your attention on creating well-structured content.
+5. Write out the base styles for your project, including general content styles, such as `font-family` and `font-size`.
+6. Start adding styles to the top of the page and work down. Only move on to the next section once you're happy you've completed the area you're working on.
+
+Writing about your workflow, technical choices, and talking through your code is a brilliant way to reinforce what you've learned.
+Evaluation Criteria Bullet Points:
+•	The application is well-composed of small, reusable functional components. 
+
+•	Props are well-structured and typed with TypeScript. The children prop is used effectively for composition.
+
+•	Excellent use of useState for local state, respecting immutability. 
+
+•	Global state (Context API) is used effectively where appropriate (e.g., theme switcher).
+
+•	useEffect is used correctly for data fetching and other side effects. Dependencies are managed perfectly to prevent re-renders. Loading and error states are handled gracefully.
+
+•	Demonstrates mastery of rendering lists with stable keys, applying conditional rendering logically, and building forms with controlled components and proper event handling.
+
+•	Effectively identifies and extracts reusable logic into custom hooks, leading to a clean, modular, and maintainable codebase.
+
+•	The design is fully responsive and adjusts flawlessly across all screen sizes, including mobile, tablet, and desktop.
+
+•	The GitHub repository has frequent, clear commits. 
+
+•	The application is deployed and fully functional. 
+
+•	The documentation and reflection are thorough and insightful.
