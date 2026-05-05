@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { fetchAllCountries, fetchCountriesByRegion, fetchCountryByName } from "../services/countriesAPI";
 
+// Custom Hook
 const useCountries = (region = "", searchQuery = "") => {
 
   const [countries, setCountries] = useState([]);

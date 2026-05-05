@@ -1,12 +1,27 @@
+import { CountryProvider } from "./backend/context/CountryContext"
 import './App.css'
 
 function App() {
 
   return (
     <>
-    <h1>Hi</h1>
     </>
+
   )
 }
 
 export default App
+
+
+
+
+
+// Place all Components between the CountryProvider wrapper
+// eg
+
+// return (
+//   <CountryProvider>
+//     <Navbar />
+//     <CountryList />
+//   </CountryProvider>
+// )
