@@ -28,7 +28,7 @@ nav span {
 .switch {
     position: relative;
     display: inline-block;
-    width: 60px;
+    width: 55px;
     height: 25px;
 }
 
@@ -62,7 +62,7 @@ nav span {
 }
 
 input:checked+.slider .icon {
-    transform: translateX(30px) rotate(360deg);
+    transform: translateX(24px) rotate(360deg);
     color: hsl(0, 0%, 100%);
 }
 
