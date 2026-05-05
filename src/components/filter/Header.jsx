@@ -1,3 +1,5 @@
+import { FiMoon, FaSun } from "react-icons/fi";
+
 function Header() {
     return (
         <nav>
@@ -5,7 +7,7 @@ function Header() {
             <label className="switch">
                 <input type="checkbox" id="toggle"></input>
                 <span className="slider round">
-                {/* ICON GOES HERE */}
+                <FiMoon />
                 </span>
             </label>
         </nav>
