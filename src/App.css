@@ -28,7 +28,7 @@ nav span {
 .switch {
     position: relative;
     display: inline-block;
-    width: 70px;
+    width: 60px;
     height: 25px;
 }
 
@@ -50,14 +50,22 @@ nav span {
     border-radius: 34px;
 }
 
-.moon-icon {
+.icon {
     position: absolute;
     left: 6px;
-    top: 10%;
+    top: 50%;
     font-size: 20px;
-    transition: transform 0.4s ease;
+    translate: 0 -50%;
+    transition: left 0.6s ease,
+        transform 0.8s ease;
+    color: hsl(200, 15%, 8%);
 }
 
-input:checked+.slider .moon-icon {
-    transform: translateX(34px) rotate(360deg);
+input:checked+.slider .icon {
+    transform: translateX(30px) rotate(360deg);
+    color: hsl(0, 0%, 100%);
+}
+
+input:checked+.slider {
+    background-color: hsl(207, 26%, 17%);
 }
