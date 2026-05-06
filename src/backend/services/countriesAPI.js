@@ -37,3 +37,9 @@ export const fetchBorderCountries = async (codes) => {
   if (!response.ok) throw new Error("Failed to fetch border countries");
   return response.json();
 };
+
+// Trivia 
+export const fetchTriviaCountries = async (count = 15) => {
+  const all = await fetchAllCountries()
+  return shuffle(all).slice(0, count)
+}
