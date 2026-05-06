@@ -3,6 +3,8 @@ import Trivia from './components/country/Trivia'
 import './App.css'
 import Header from './components/filter/Header'
 import HomePage from './components/pages/Home'
+// import { CountryProvider } from "./backend/context/CountryContext.jsx";
+// import { fetchAllCountries } from "./backend/services/countriesAPI";
 
 
 function App() {
