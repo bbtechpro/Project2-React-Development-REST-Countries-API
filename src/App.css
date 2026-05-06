@@ -91,6 +91,7 @@ input:checked+.slider {
     background-color: transparent;
     outline: none;
     color: hsl(0, 0%, 52%);
+    width: 85%;
 }
 
 #search::placeholder, 
