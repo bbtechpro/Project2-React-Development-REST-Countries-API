@@ -11,7 +11,15 @@ function RegionFilter() {
         {label: "Asia", value: "asia"},
         {label: "Europe", value: "europe"},
         {label: "Oceania", value: "oceania"},
-    ]
+    ];
+
+    return (
+        <Select 
+        options={options}
+        values={value}
+        onChange={(values) => setValue(values)}
+        />
+    )
 }
 
 export default RegionFilter;
