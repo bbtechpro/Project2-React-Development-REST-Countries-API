@@ -74,12 +74,12 @@ input:checked+.slider {
     background-color: hsl(207, 26%, 17%);
 }
 
-/* SEARCH */
+/* SEARCH & FILTER */
 .search-container {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    max-width: 350px;
+    width: 350px;
     padding: 1rem 0.25rem;
     background-color: hsl(0, 0%, 100%);
     border-radius: 0.25rem;
@@ -103,3 +103,12 @@ input:checked+.slider {
     font-size: 16px;
     width: 25px;
 }
+
+.filter-search {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
