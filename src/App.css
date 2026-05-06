@@ -207,6 +207,28 @@ input:checked+.slider {
     font-size: 0.9rem;
 }
 
+.border-countries {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.border-countries span {
+    font-weight: 600;
+    font-size: 0.875;
+    margin-right: 4px;
+}
+
+.border-tag {
+    padding: 4px 20px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: inherit;
+}
+
 @media (max-width: 1170px) {
     .wrapper {
         grid-template-columns: repeat(2, 1fr);
@@ -214,6 +236,10 @@ input:checked+.slider {
 
     .flexbox {
         flex-direction: column;
+    }
+
+    .details-right {
+        max-width: 560px;
     }
 }
 
