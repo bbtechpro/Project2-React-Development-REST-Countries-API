@@ -1,6 +1,7 @@
 import './App.css'
 import Header from './components/filter/Header'
 import SearchInput from './components/filter/SearchInput'
+import RegionFilter from './components/filter/RegionFilter'
 
 function App() {
 
@@ -9,6 +10,7 @@ function App() {
       <Header />
       <div className="filter-search">
         <SearchInput />
+        <RegionFilter />
       </div>
     </>
   )
