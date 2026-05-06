@@ -9,7 +9,9 @@ function HomePage() {
                 <SearchInput />
                 <RegionFilter />
             </div>
-            <CountryCard />
+            <div className="wrapper">
+                <CountryCard />
+            </div>
         </div>
     )
 }
