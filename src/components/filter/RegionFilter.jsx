@@ -2,8 +2,6 @@ import { Select } from "react-dropdown-select";
 import { useState } from "react";
 
 function RegionFilter() {
-    const [value, setValue] = useState([]);
-
     const options = [
         { label: "All", value: "" },
         { label: "Africa", value: "africa" },
@@ -12,6 +10,8 @@ function RegionFilter() {
         { label: "Europe", value: "europe" },
         { label: "Oceania", value: "oceania" },
     ];
+
+    const [value, setValue] = useState([options[0]]);
 
     return (
         <Select
