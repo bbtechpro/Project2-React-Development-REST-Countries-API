@@ -40,6 +40,10 @@ export const fetchBorderCountries = async (codes) => {
 
 // Trivia 
 export const fetchTriviaCountries = async (count = 15) => {
-  const all = await fetchAllCountries()
-  return shuffle(all).slice(0, count)
+  const response = await fetch(
+    `${BASE_URL}/all?fields=name,flags`
+  )
+  if (!response.ok) throw new Error('Failed to fetch trivia countries')
+  const all = await response.json()
+  return all.sort(() => Math.random() - 0.5).slice(0, count)
 }
