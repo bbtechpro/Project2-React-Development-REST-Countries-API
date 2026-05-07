@@ -159,17 +159,24 @@ input:checked+.slider {
     padding: 1rem 0;
 }
 
+.select .react-dropdown-select-content,
+.selet .react-dropdown-select-input {
+    color: var(--text-color);
+}
+
+.select .react-dropdown-select-placeholder {
+    color: var(--input-color);
+}
+
 .select .react-dropdown-select-dropdown {
     background-color: var(--element-color);
     border: none;
+    color: var(--text-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
 
 .select .react-dropdown-select-item {
     border: none;
-}
-
-.select .react-dropdown-select-item-selected {
-    background-color: var(--bg-color) !important;
 }
 
 /* CARDS */
