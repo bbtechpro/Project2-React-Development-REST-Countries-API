@@ -1,8 +1,11 @@
 import CountryCard from "../country/CountryCard";
 import SearchInput from "../filter/SearchInput";
 import RegionFilter from "../filter/RegionFilter";
+import { useCountryContext } from "../../backend/context/CountryContext.jsx";
 
 function HomePage() {
+    const { countries, loading, error } = useCountryContext();
+
     return (
         <div>
             <div className="filter-search">
@@ -10,7 +13,11 @@ function HomePage() {
                 <RegionFilter />
             </div>
             <div className="wrapper">
-                <CountryCard />
+                {loading && <p>Loading...</p>}
+                {error && <p>Error: {error}</p>}
+                {countries.map(country => (
+                    <CountryCard key={country.cca3} country={country} />
+                ))}
             </div>
         </div>
     )
