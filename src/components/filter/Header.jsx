@@ -1,34 +1,32 @@
 import { IoMoon } from "react-icons/io5";
 import { FaSun } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useTheme } from "./ThemeContext-s";
 
 function Header() {
-    const [darkMode, setDarkMode] = useState(false);
+    const { isDarkMode, toggleTheme } = useTheme();
+
     const [showSun, setShowSun] = useState(false);
 
-    function handleToggle() {
-        const newMode = !darkMode;
-
-        setDarkMode(newMode);
-
-        // HALFWAY ANIMATION
-        setTimeout(() => {
-            setShowSun(newMode);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShowSun(isDarkMode);
         }, 200);
-    }
+        return () => clearTimeout(timer);
+    }, [isDarkMode])
 
     return (
         <nav>
             <span>Where in the World?</span>
 
             <label className="switch">
-                <input 
-                type="checkbox" 
-                checked={darkMode}
-                onChange={handleToggle} ></input>
+                <input
+                    type="checkbox"
+                    checked={isDarkMode}
+                    onChange={toggleTheme} ></input>
                 <span className="slider round">
                     {showSun ? (
-                      <FaSun className="sun-icon icon" />  
+                        <FaSun className="sun-icon icon" />
                     ) : (
                         <IoMoon className="moon-icon icon" />
                     )}
