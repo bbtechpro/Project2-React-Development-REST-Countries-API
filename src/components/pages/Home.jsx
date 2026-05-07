@@ -1,4 +1,4 @@
-import CountryCard from "../country/CountryCard-o.jsx";
+import CountryCard from "../country/CountryCard.jsx";
 import SearchInput from "../filter/SearchInput";
 import RegionFilter from "../filter/RegionFilter";
 import { useCountryContext } from "../../backend/context/CountryContext.jsx";
