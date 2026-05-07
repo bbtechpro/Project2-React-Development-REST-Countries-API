@@ -199,6 +199,14 @@ input:checked+.slider {
     transform: scale(102%);
 }
 
+.empty-message {
+    text-align: center;
+    margin-top: 3rem;
+    color: var(--text-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
 /* CARDS */
 .wrapper {
     display: grid;
