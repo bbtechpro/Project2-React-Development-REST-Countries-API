@@ -1,7 +1,7 @@
 import { IoMoon } from "react-icons/io5";
 import { FaSun } from "react-icons/fa";
 import { useState, useEffect } from "react";
-import { useTheme } from "./ThemeContext";
+import { useTheme } from "./ThemeContext-s";
 
 function Header() {
     const { isDarkMode, toggleTheme } = useTheme();
