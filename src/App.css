@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
 
 [data-theme="light"] {
-    --bg-color: hsl(0, 0, 98%);
-    --element-color: hsl(0, 0, 100%);
-    --text-color: hsl(200, 15%, 8%);
-    --input-color: hsl(0, 0%, 52%);
+  --bg-color: hsl(0, 0%, 98%);
+  --element-color: hsl(0, 0%, 100%);
+  --text-color: hsl(200, 15%, 8%);
+  --input-color: hsl(0, 0%, 52%);
 }
 
 [data-theme="dark"] {
@@ -355,5 +355,18 @@ input:checked+.slider {
         grid-template-columns: 1fr;
         gap: 10px;
         margin-bottom: 32px;
+    }
+
+    nav {
+        padding: 1rem 0.75rem;
+    }
+
+    .nav-controls {
+        gap: 1rem;
+    }
+
+    .trivia-btn {
+        padding: 8px 24px;
+        font-size: 10px;
     }
 }
