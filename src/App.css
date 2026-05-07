@@ -196,6 +196,7 @@ input:checked+.slider {
 }
 
 .card-body {
+    position: relative;
     padding: 1rem 1.5rem 2rem;
 }
 
@@ -212,6 +213,17 @@ input:checked+.slider {
     height: 180px;
     object-fit: cover;
     border-radius: 4px 4px 0 0;
+}
+
+.heart-button {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background-color: transparent;
+    border: none;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 1.5rem;
 }
 
 /* Details Page */
