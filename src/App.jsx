@@ -13,6 +13,10 @@ function App() {
 
   return (
     <CountryProvider>
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 81675d754a4fd44e75f2f6c5052f6c5bfc58dc51
       <Router>
         <Header />
         <button onClick={() => setTriviaOpen(true)}>Play Trivia</button>
@@ -22,6 +26,16 @@ function App() {
         </Routes>
         <Trivia isOpen={triviaOpen} onClose={() => setTriviaOpen(false)} />
       </Router>
+<<<<<<< HEAD
+=======
+=======
+      <Header
+        setTriviaOpen={setTriviaOpen}
+      />
+      <HomePage />
+      <Trivia isOpen={triviaOpen} onClose={() => setTriviaOpen(false)} />
+>>>>>>> be7e60312d11173cdadc4accf4357ec40ebb4aad
+>>>>>>> 81675d754a4fd44e75f2f6c5052f6c5bfc58dc51
     </CountryProvider>
   )
 }
