@@ -5,6 +5,7 @@ import Header from './components/filter/Header'
 import HomePage from './components/pages/Home'
 import './App.css'
 
+
 function App() {
   const [triviaOpen, setTriviaOpen] = useState(false)
 
