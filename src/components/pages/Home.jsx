@@ -12,7 +12,7 @@ function HomePage() {
     } = useCountryContext();
 
     const filteredCountries = countries.filter(country => {
-        if(showFavoritesOnly) {
+        if (showFavoritesOnly) {
             return isFavourite(country.cca3)
         }
 
@@ -28,7 +28,14 @@ function HomePage() {
             <div className="wrapper">
                 {loading && <p>Loading...</p>}
                 {error && <p>Error: {error}</p>}
-                
+
+                {showFavoritesOnly &&
+                    filteredCountries.length === 0 && (
+                        <p className="empty-message">
+                            No Favorites Found...
+                        </p>
+                    )}
+
                 {filteredCountries.map(country => (
                     <CountryCard key={country.cca3} country={country} />
                 ))}
