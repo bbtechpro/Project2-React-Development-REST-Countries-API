@@ -1,4 +1,4 @@
-import { createContext, useContext, useState } from "react";
+import { createContext, useContext, useState, useEffect } from "react";
 import useCountries from "../hooks/useCountries";
 
 // Created the Context Object
@@ -8,8 +8,16 @@ const CountryContext = createContext();
 export const CountryProvider = ({ children }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [region, setRegion] = useState("");
-  const [darkMode, setDarkMode] = useState(false);
-  const [favourites, setFavourites] = useState([]);
+  const [darkMode, setDarkMode] = useState(() =>
+    localStorage.getItem("darkMode") === "true"
+  );
+  const [favourites, setFavourites] = useState(() => {
+    try { return JSON.parse(localStorage.getItem("favourites")) || []; }
+    catch { return []; }
+  });
+
+  useEffect(() => { localStorage.setItem("darkMode", darkMode); }, [darkMode]);
+  useEffect(() => { localStorage.setItem("favourites", JSON.stringify(favourites)); }, [favourites]);
 
   // Inserted custom hook here
   const { countries, loading, error } = useCountries(region, searchQuery);

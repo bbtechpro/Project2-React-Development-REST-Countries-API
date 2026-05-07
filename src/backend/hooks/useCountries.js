@@ -25,7 +25,7 @@ const useCountries = (region = "", searchQuery = "") => {
           data = await fetchAllCountries();
         }
 
-        setCountries(data);
+        setCountries([...data].sort((a, b) => a.name.common.localeCompare(b.name.common)));
 
       } catch (err) {
         setError(err.message);
