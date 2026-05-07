@@ -1,7 +1,10 @@
 import { Select } from "react-dropdown-select";
-import { useState } from "react";
+import { useCountryContext } from "../../backend/context/CountryContext";
 
 function RegionFilter() {
+
+    const { region, setRegion } = useCountryContext();
+
     const options = [
         { label: "All", value: "" },
         { label: "Africa", value: "africa" },
@@ -11,14 +14,19 @@ function RegionFilter() {
         { label: "Oceania", value: "oceania" },
     ];
 
-    const [value, setValue] = useState([options[0]]);
+    const selectedValue = options.filter((option) =>
+        option.value === region);
+
+    const handleChange = (values) => {
+        setRegion(values[0]?.value ?? "")
+    }
 
     return (
-        <Select 
+        <Select
             className="select"
             options={options}
-            values={value}
-            onChange={(values) => setValue(values)}
+            values={selectedValue}
+            onChange={handleChange}
             style={{
                 width: "200px",
                 border: "none",
