@@ -23,10 +23,12 @@ function HomePage() {
             </div>
             <div className="wrapper">
                 {countries.map((country) => {
-                    <CountryCard
-                        key={country.cca3}
-                        country={country}
-                    />
+                    return (
+                        <CountryCard
+                            key={country.cca3}
+                            country={country}
+                        />
+                    )
                 })}
             </div>
         </div>
