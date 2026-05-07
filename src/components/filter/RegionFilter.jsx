@@ -33,7 +33,7 @@ function RegionFilter() {
                 boxShadow: "0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)",
                 padding: "0.75rem",
                 backgroundColor: "var(--element-color)",
-                color: "var(--input-color)"
+                color: "var(--text-color)"
             }}
         />
     )
