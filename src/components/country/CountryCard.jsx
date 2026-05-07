@@ -1,4 +1,5 @@
 import { useCountryContext } from '../../backend/context/CountryContext.jsx'
+import { IoHeart, IoHeartOutline } from 'react-icons/io5'
 
 function CountryCard({ country }) {
   const { addFavourite, removeFavourite, isFavourite } = useCountryContext()
@@ -12,8 +13,13 @@ function CountryCard({ country }) {
         <p>Population: {country.population.toLocaleString()}</p>
         <p>Region: {country.region}</p>
         <p>Capital: {country.capital?.[0]}</p>
-        <button onClick={() => saved ? removeFavourite(country.cca3) : addFavourite(country)}>
-          {saved ? "♥" : "♡"}
+        <button
+          className='heart-button'
+          onClick={() => saved
+            ? removeFavourite(country.cca3)
+            : addFavourite(country)}
+        >
+          {saved ? <IoHeart /> : <IoHeartOutline /> }
         </button>
       </div>
     </div>
