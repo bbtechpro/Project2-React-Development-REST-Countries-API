@@ -5,6 +5,16 @@ import useCountries from "../../backend/hooks/useCountries";
 
 function HomePage() {
 
+    const { countries, loading, error } = useCountries();
+
+    if(loading) {
+        return <p>Loading...</p>
+    }
+
+    if(error) {
+        return <p>{error}</p>
+    }
+
     return (
         <div>
             <div className="filter-search">
