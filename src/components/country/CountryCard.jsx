@@ -7,6 +7,7 @@ function CountryCard({ country }) {
   const saved = isFavourite(country.cca3)
 
   const handleCardClick = () => {
+    console.log('Card clicked:', country.name.common)
     navigate(`/country/${country.cca3}`)
   }
 
@@ -18,10 +19,12 @@ function CountryCard({ country }) {
         <p>Population: {country.population.toLocaleString()}</p>
         <p>Region: {country.region}</p>
         <p>Capital: {country.capital?.[0]}</p>
-        <button onClick={(e) => {
-          e.stopPropagation()
-          saved ? removeFavourite(country.cca3) : addFavourite(country)
-        }}>
+        <button 
+          onClick={(e) => {
+            e.stopPropagation()
+            saved ? removeFavourite(country.cca3) : addFavourite(country)
+          }}
+        >
           {saved ? "♥" : "♡"}
         </button>
       </div>
