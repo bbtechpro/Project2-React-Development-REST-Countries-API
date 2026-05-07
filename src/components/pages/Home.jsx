@@ -7,11 +7,11 @@ function HomePage() {
 
     const { countries, loading, error } = useCountries();
 
-    if(loading) {
+    if (loading) {
         return <p>Loading...</p>
     }
 
-    if(error) {
+    if (error) {
         return <p>{error}</p>
     }
 
@@ -22,7 +22,12 @@ function HomePage() {
                 <RegionFilter />
             </div>
             <div className="wrapper">
-                <CountryCard />
+                {countries.map((country) => {
+                    <CountryCard
+                        key={country.cca3}
+                        country={country}
+                    />
+                })}
             </div>
         </div>
     )
