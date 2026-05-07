@@ -31,6 +31,10 @@ body {
     background-color: var(--bg-color);
 }
 
+.page-wrapper {
+    padding-inline: 2rem;
+}
+
 /* HEADER */
 
 nav {
@@ -131,7 +135,7 @@ input:checked+.slider {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
+    padding: 1rem 0;
 }
 
 .select .react-dropdown-select-dropdown {
@@ -153,7 +157,6 @@ input:checked+.slider {
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     margin-top: 1.5rem;
-    padding: 0 2rem;
 }
 
 .card {
