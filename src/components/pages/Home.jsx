@@ -16,7 +16,7 @@ function HomePage() {
     }
 
     return (
-        <div>
+        <div className="page-wrapper">
             <div className="filter-search">
                 <SearchInput />
                 <RegionFilter />
