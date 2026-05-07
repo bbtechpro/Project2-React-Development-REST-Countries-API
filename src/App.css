@@ -170,7 +170,7 @@ input:checked+.slider {
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: scale(105%);
     cursor: pointer;
 }
 
