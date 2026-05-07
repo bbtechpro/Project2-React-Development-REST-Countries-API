@@ -14,18 +14,18 @@ function RegionFilter() {
     const [value, setValue] = useState([options[0]]);
 
     return (
-        <Select
+        <Select 
+            className="select"
             options={options}
             values={value}
             onChange={(values) => setValue(values)}
             style={{
                 width: "200px",
                 border: "none",
-                border: "none",
                 boxShadow: "0 0.125rem 0.25rem rgba(0, 0, 0, 0.075)",
                 padding: "0.75rem",
-                backgroundColor: "hsl(0, 0%, 100%)",
-                color: "hsl(0, 0%, 52%)"
+                backgroundColor: "var(--element-color)",
+                color: "var(--input-color)"
             }}
         />
     )
