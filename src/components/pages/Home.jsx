@@ -1,11 +1,11 @@
 import CountryCard from "../country/CountryCard";
 import SearchInput from "../filter/SearchInput";
 import RegionFilter from "../filter/RegionFilter";
-import useCountries from "../../backend/hooks/useCountries";
+import { useCountryContext } from "../../backend/context/CountryContext";
 
 function HomePage() {
 
-    const { countries, loading, error } = useCountries();
+    const { countries, loading, error } = useCountryContext();
 
     if (loading) {
         return <p>Loading...</p>
