@@ -11,8 +11,9 @@ function App() {
 
   return (
     <CountryProvider>
-      <Header />
-      <button onClick={() => setTriviaOpen(true)}>Play Trivia</button>
+      <Header
+        setTriviaOpen={setTriviaOpen}
+      />
       <HomePage />
       <Trivia isOpen={triviaOpen} onClose={() => setTriviaOpen(false)} />
     </CountryProvider>
