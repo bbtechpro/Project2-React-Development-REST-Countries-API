@@ -11,6 +11,9 @@ export const CountryProvider = ({ children }) => {
   const [darkMode, setDarkMode] = useState(() =>
     localStorage.getItem("darkMode") === "true"
   );
+
+  const [showFavoritesOnly, setShowFavoritesOnly] = useState(false);
+
   const [favourites, setFavourites] = useState(() => {
     try { return JSON.parse(localStorage.getItem("favourites")) || []; }
     catch { return []; }
@@ -55,6 +58,8 @@ export const CountryProvider = ({ children }) => {
     addFavourite,
     removeFavourite,
     isFavourite,
+    showFavoritesOnly,
+    setShowFavoritesOnly,
   };
 
   return (
