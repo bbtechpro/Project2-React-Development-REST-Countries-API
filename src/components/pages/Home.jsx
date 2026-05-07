@@ -4,7 +4,20 @@ import RegionFilter from "../filter/RegionFilter";
 import { useCountryContext } from "../../backend/context/CountryContext.jsx";
 
 function HomePage() {
-    const { countries, loading, error } = useCountryContext();
+    const { countries,
+        loading,
+        error,
+        showFavoritesOnly,
+        isFavourite,
+    } = useCountryContext();
+
+    const filteredCountries = countries.filter(country => {
+        if(showFavoritesOnly) {
+            return isFavourite(country.cca3)
+        }
+
+        return true;
+    })
 
     return (
         <div className="page-wrapper">
@@ -15,7 +28,8 @@ function HomePage() {
             <div className="wrapper">
                 {loading && <p>Loading...</p>}
                 {error && <p>Error: {error}</p>}
-                {countries.map(country => (
+                
+                {filteredCountries.map(country => (
                     <CountryCard key={country.cca3} country={country} />
                 ))}
             </div>
