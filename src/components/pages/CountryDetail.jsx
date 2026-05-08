@@ -12,18 +12,21 @@ function CountryDetail() {
     const [borderCountries, setBorderCountries] = useState([]);
 
     useEffect(() => {
-        const foundCountry = countries.find(c => c.cca3 === cca3);
-        if (foundCountry) {
-            setCountry(foundCountry);
-            
-            // Find border countries
-            if (foundCountry.borders) {
-                const borders = foundCountry.borders.map(borderCode => 
-                    countries.find(c => c.cca3 === borderCode)
-                ).filter(Boolean);
-                setBorderCountries(borders);
+        const timer = setTimeout(() => {
+            const foundCountry = countries.find(c => c.cca3 === cca3);
+            if (foundCountry) {
+                setCountry(foundCountry);
+                
+                // Find border countries
+                if (foundCountry.borders) {
+                    const borders = foundCountry.borders.map(borderCode => 
+                        countries.find(c => c.cca3 === borderCode)
+                    ).filter(Boolean);
+                    setBorderCountries(borders);
+                }
             }
-        }
+        }, 0);
+        return () => clearTimeout(timer);
     }, [cca3, countries]);
 
     const handleBorderClick = (borderCca3) => {
