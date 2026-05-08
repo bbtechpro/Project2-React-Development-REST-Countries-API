@@ -18,7 +18,9 @@ function CountryCard({ country }) {
         <p>Population: {country.population.toLocaleString()}</p>
         <p>Region: {country.region}</p>
         <p>Capital: {country.capital?.[0]}</p>
-        <button onClick={(e) => {
+        <button 
+        className='heart-button'
+        onClick={(e) => {
           e.stopPropagation()
           saved ? removeFavourite(country.cca3) : addFavourite(country)
         }}>
