@@ -172,4 +172,39 @@ Evaluation Criteria Bullet Points:
 
 •	The application is deployed and fully functional. 
 
+Deployment link: [react-dev-rest-countries-API](https://react-dev-rest-countries-api.netlify.app/) 
+
 •	The documentation and reflection are thorough and insightful.
+
+Project Reflection
+
+Development Process
+- The development of the REST Countries API application followed a structured team workflow. We began by initializing a public GitHub repository and setting up the base project structure. Our primary focus was on establishing a robust Component Architecture, breaking the UI into small, reusable functional components like CountryCard and CountryDetail. We integrated the REST Countries API using useEffect for data fetching, ensuring that loading and error states were handled to provide a smooth user experience.
+
+Challenges & Solutions
+- One of the primary challenges we faced was implementing seamless navigation between the home gallery and specific country details. We solved this by installing and configuring react-router-dom, using URL parameters (e.g., /country/:cca3) to dynamically render data based on the country code. Another technical hurdle was the "border countries" feature. We had to ensure that clicking a border country button would trigger a fresh fetch or a state update for the new country code. We also implemented proper event handling in the CountryCard to prevent "favorite" button clicks from accidentally triggering navigation to the details page.
+Potential Improvements
+- While the application meets all core requirements—including a functional dark mode toggle using the Context API—further enhancements could be made. We would like to implement more advanced TypeScript typing for the API responses to improve type safety. Additionally, adding a "Save to Favorites" feature with local storage persistence would provide more value to the user. Finally, we believe optimizing the search functionality with debouncing would reduce unnecessary API calls during rapid typing.
+A responsive React application that allows users to explore data from the REST Countries API, featuring a theme switcher and detailed country insights.
+
+✨ Features
+•	Dynamic Data Fetching: Integrates with the REST Countries API to display real-time country information.
+•	React Router Navigation: Uses react-router-dom for seamless transitions between the homepage and detail pages.
+•	Search & Filter: Users can search for specific countries or filter them by region.
+•	Interactive Detail Pages: View flags, native names, languages, and currencies.
+•	Border Country Links: Clickable border countries that allow for easy navigation between neighboring nations.
+•	Dark Mode Toggle: A global theme switcher implemented using React Context API.
+•	Responsive Design: Optimized for mobile, tablet, and desktop screens.
+🛠️ Technical Implementation
+•	State Management: Utilizes useState for local component state and Context API for global theme management.
+•	Side Effects: useEffect is used for fetching data, with carefully managed dependencies to prevent infinite loops.
+•	Reusable Logic: We extracted core functionality into custom hooks for a cleaner, more modular codebase.
+•	Version Control: Developed with frequent, descriptive Git commits from the whole team.
+
+📝 Reflections
+The project successfully demonstrates our team's mastery of React fundamentals, including props composition, conditional rendering, and stable key usage in lists. By moving away from hardcoded data to dynamic API integration, we have provided a "real-world" experience for users exploring global geography. We all agreed that working as group provided us with a rich experience that exposed us to many situations and challenges that we had to overcome using the collaboration tools on Github for cloning, pushing and merging branches, and synchronizing our workflows.
+
+
+
+
+
