@@ -19,11 +19,11 @@ function CountryCard({ country }) {
         <p>Region: {country.region}</p>
         <p>Capital: {country.capital?.[0]}</p>
         <button 
-          onClick={(e) => {
-            e.stopPropagation()
-            saved ? removeFavourite(country.cca3) : addFavourite(country)
-          }}
-        >
+        className='heart-button'
+        onClick={(e) => {
+          e.stopPropagation()
+          saved ? removeFavourite(country.cca3) : addFavourite(country)
+        }}>
           {saved ? "♥" : "♡"}
         </button>
       </div>
