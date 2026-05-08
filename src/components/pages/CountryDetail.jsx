@@ -59,7 +59,6 @@ function CountryDetail() {
 
     return (
         <>
-            <Header />
             <div className="details-container">
                 <button className="back-button" onClick={handleBackClick}>
                     Back
