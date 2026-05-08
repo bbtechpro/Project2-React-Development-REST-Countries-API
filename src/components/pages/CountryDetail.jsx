@@ -85,7 +85,7 @@ function CountryDetail() {
                             <p><strong>Currencies: </strong>{currencies}</p>
                         </div>
                         <div className="border-countries">
-                            <span>Border Countries: </span>
+                            <p>Border Countries: </p>
                             {borderCountries.length > 0 ? (
                                 borderCountries.map(border => (
                                     <button 
