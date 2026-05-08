@@ -14,8 +14,7 @@ function App() {
   return (
     <CountryProvider>
       <Router>
-        <Header />
-        <button onClick={() => setTriviaOpen(true)}>Play Trivia</button>
+        <Header setTriviaOpen={setTriviaOpen} />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/country/:cca3" element={<CountryDetail />} />
